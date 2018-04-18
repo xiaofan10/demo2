@@ -15,9 +15,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+               var imgArrs = [];
+                var img1 = new Image();
+                var img2 = new Image();
+                img1.src = "img/1.png";
+                imgArrs.push(img1);
+                img2.src = "img/2.png";
+                imgArrs.push(img2);
+    </script>
 </head>
 <body>
 <div style="margin:0 auto;">
+    <div id="preImg" style="overflow:hidden;width:0;height:0;"></div>
     <div style="display:inline-block;min-width:600.0px;margin:0 auto;">
         <div style="height:73.0px;background:#2688fe;">
             <div style="margin-left:50.0px;height:73.0px;background:url(./img/1.png) no-repeat left center;background-size:200px">
@@ -39,7 +49,7 @@
                         </a>
                     </p>
                 </div>
-                <table  class="loophole-message" border="0"
+                <table class="loophole-message" border="0"
                        style="position:relative;text-align:left;min-width:500.0px;height:200.0px;border-collapse:collapse;font-size:12.0px;">
                     <tbody>
                     <tr style="border-top:1.0px solid #dddddd;">
@@ -96,22 +106,22 @@
                             漏洞详情
                         </th>
                         <td colspan="3" style="padding-left:10.0px;color:#666670;">
-                            <div style="box-sizing: border-box; margin: 0px; padding: 0px; list-style: none; color: rgb(153, 153, 153); font-family: tahoma, 微软雅黑; font-size: 14px; line-height: 25.2px; height: auto;">
-                                <span style="box-sizing:border-box;margin:0;padding:0;list-style:none;"><strong>一、详细说明：其中包括场景、截图、漏洞重现的方法</strong></span>
-                            </div>
-                            <div style="clear:both;"><br>司法改革</div>
-                            <div style="clear:both;">
-                                <img src="img/1.png"><br><br><br><br></div>
+                            <div style="overflow:auto;max-width:800px;">
+                                <div style="box-sizing: border-box; margin: 0px; padding: 0px; list-style: none; color: rgb(153, 153, 153); font-family: tahoma, 微软雅黑; font-size: 14px; line-height: 25.2px; height: auto;">
+                                    <span style="box-sizing:border-box;margin:0;padding:0;list-style:none;"><strong>一、详细说明：其中包括场景、截图、漏洞重现的方法</strong></span>
+                                </div>
+                                <div style="clear:both;"><br>司法改革</div>
+                                    <img src="">
                                 <div style="box-sizing: border-box; margin: 0px; padding: 0px; list-style: none; color: rgb(153, 153, 153); font-family: tahoma, 微软雅黑; font-size: 14px; line-height: 25.2px; height: auto;">
                                     <span style="box-sizing:border-box;margin:0;padding:0;list-style:none;"><strong>二、漏洞证明（在这里写poc）</strong></span>
                                 </div>
-                                <div style="clear:both;"><br><br><br>
-                                    <!--<img src="img/2.png"><br><br></div>-->
+                                    <img src="">
                                     <div style="box-sizing: border-box; margin: 0px; padding: 0px; list-style: none; color: rgb(153, 153, 153); font-family: tahoma, 微软雅黑; font-size: 14px; line-height: 25.2px; height: auto;">
                                         <span style="box-sizing:border-box;margin:0;padding:0;list-style:none;"><strong>三、修复方案</strong></span>
                                     </div>
                                     <div style="clear:both;"><br><br></div>
                                     <div style="line-height: 20px; clear: both; height: auto;"><br></div>
+                                </div>
                         </td>
                     </tr>
                     </tbody>
@@ -120,10 +130,15 @@
                 <div class="footer-message" style="position:absolute;padding:25.0px 0px;">
                     <h6 style="margin:0 0 8.0px 0;">温馨提示：</h6>
                     <ol style="margin:0 0 0 15.0px;padding:0;">
-                        <li style="margin-bottom:5.0px;font-size:12.0px;color:#9e9f9a;">与你相关，点击“开始修复”，修复完成后，再回到处理页面点击“修复完成”。</li>
+                        <li style="margin-bottom:5.0px;font-size:12.0px;color:#9e9f9a;">
+                            与你相关，点击“开始修复”，修复完成后，再回到处理页面点击“修复完成”。
+                        </li>
                         <li style="margin-bottom:5.0px;font-size:12.0px;color:#9e9f9a;">与你无关，但知道该谁处理：点击“转移”。</li>
-                        <li style="margin-bottom:5.0px;font-size:12.0px;color:#9e9f9a;">漏洞无法按期修复完成，点击“延期”，更新“限定修复时间”，该操作需要上级审批。</li>
-                        <li style="margin-bottom:5.0px;font-size:12.0px;color:#9e9f9a;">与你相关，但此漏洞不需要修复：点击“不修复”，该操作需要上级审批。<br><span
+                        <li style="margin-bottom:5.0px;font-size:12.0px;color:#9e9f9a;">
+                            漏洞无法按期修复完成，点击“延期”，更新“限定修复时间”，该操作需要上级审批。
+                        </li>
+                        <li style="margin-bottom:5.0px;font-size:12.0px;color:#9e9f9a;">
+                            与你相关，但此漏洞不需要修复：点击“不修复”，该操作需要上级审批。<br><span
                                 style="color:#ff0000;">依据《<span style="color:#0000ff;">中华人民共和国网络安全法</span>》第二十二条、六十条规定，请立即采取修复措施，否则将面临法律风险。</span>
                         </li>
                     </ol>
@@ -132,14 +147,21 @@
 
         </div>
         <div class="footer-wrap" style="background:#f2f2f2;width:100%;box-sizing:border-box;border:1px solid #dddddd;">
-
         </div>
     </div>
 
 </div>
+<div id="look-img" style="position:fixed;top:0;left:0;right:0;bottom:0;z-index:999999;background:rgba(0,0,0,.5);display:none;" onclick="hide();">
+  <img id="look-source" src="" />
+</div>
 </div>
 <script type="text/javascript">
-    window.onload = function() {
+
+    function hide(){
+        const lookImg = document.getElementById('look-img');
+        lookImg.style.display = 'none';
+    }
+    window.onload = function () {
         const userMessage = document.getElementsByClassName('user-message')[0];
         const loopholeMessage = document.getElementsByClassName('loophole-message')[0];
         const footerMessage = document.getElementsByClassName('footer-message')[0];
@@ -149,8 +171,36 @@
         loopholeMessage.style.marginTop = userMessageHeight + 'px';
         // loopholeMessage.style.marginBottom = footerMessageHeight + 'px';
         footerMessage.style.bottom = -footerMessageHeight - 20 + 'px'
-        footerWrap.style.height = footerMessageHeight + 'px';;
-        console.log(footerMessage.offsetHeight)
+        footerWrap.style.height = footerMessageHeight + 'px';
+        imgArrs.forEach(function(item,key){
+            item.class = "preload";
+
+            item.style.cssText = 'visibility:hidden;position:absolute;top:0;'
+            console.log(item.offsetWidth)
+            // document.getElementById('preImg').append(item);
+
+        });
+
+        const imgArr = document.getElementsByTagName('table')[0].getElementsByTagName('img');
+        Array.prototype.forEach.call(imgArr, function(item, key){
+            item.src = imgArrs[key].src;
+            if(item.offsetWidth > 1024) {
+                item.style.width = '50%';
+            }
+            item.onclick =   function show(e){
+                const lookImg = document.getElementById('look-img');
+                const lookSource = document.getElementById('look-source');
+                lookImg.style.display = 'flex';
+                lookImg.style.alignItems = 'center';
+                lookImg.style.justifyContent = 'center';
+
+                lookSource.style.width = '80%'
+
+                lookSource.src = e.target.src;
+            }
+        });
+
+
     }
 </script>
 </body>
